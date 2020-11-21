@@ -15,19 +15,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        btnStart = (Button) findViewById(R.id.btnStart);
-//        btnStop = (Button) findViewById(R.id.btnStop);
-//
-//        btnStart.setOnClickListener(this);
-//        btnStop.setOnClickListener(this);
+        btnStart = (Button) findViewById(R.id.btnStart);
+        btnStop = (Button) findViewById(R.id.btnStop);
+
+        btnStart.setOnClickListener(this);
+        btnStop.setOnClickListener(this);
     }
 
-//    @Override
-//    public void onClick(View v) {
-//        if (btnStart.equals(v)) {
-//            startService(new Intent(this , MusicService.class));
-//        }else if(btnStop.equals(v)){
-//            stopService(new Intent(this , MusicService.class));
-//        }
-//    }
+    @Override
+    public void onClick(View v) {
+        if (btnStart.equals(v)) {
+            startService(new Intent(this , MusicService.class));
+        }else if(btnStop.equals(v)){
+            stopService(new Intent(this , MusicService.class));
+        }
+    }
 }
